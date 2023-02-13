@@ -16,11 +16,9 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return "Simpson{" +
-                "quote='" + quote + '\'' +
-                ", character='" + character + '\'' +
-                ", image='" + image + '\'' +
-                ", charcaterDirection='" + charcaterDirection + '\'' +
+        return "Pokemon{" +
+                "name='" + name + '\'' +
+                ", url='" + url + '\'' +
                 '}';
     }
 }

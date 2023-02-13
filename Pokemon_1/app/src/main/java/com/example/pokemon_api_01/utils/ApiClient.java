@@ -7,7 +7,7 @@ public class ApiClient {
     public static final String BASE_URL =
             "http://172.21.3.34:8080/RakutenTV/webresources/";
     public static final String BASE_URL1 =
-            "https://pokeapi.co/api/vs/pokemon/";
+            "https://pokeapi.co/api/vs/";
     private static Retrofit retrofit = null;
     public static Retrofit getClient() {
         if (retrofit == null) {

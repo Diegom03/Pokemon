@@ -1,6 +1,6 @@
 package com.example.pokemon_api_01.utils;
 
-import com.svalero.mvp_simpson_01.entities.Simpson;
+import com.example.pokemon_api_01.entities.Pokemon;
 
 import java.util.ArrayList;
 
@@ -9,11 +9,14 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
-    @GET("quotes")
-    Call<ArrayList<Simpson>>
-    getPopularSimpson(@Query("count")
-            int count);
-    //Call<ArrayList<Simpson>>  getPopularSimpson(@Path("count") int count);
+    @GET("pokemon")
+    Call<ArrayList<Pokemon>> getPokemons();
+
+    /*https://pokeapi.co/api/v2/pokemon?limit=20&offset=20*/
+    @GET("pokemon/")
+    Call<ArrayList<Pokemon>> getPokemon();
+
+    Call<ArrayList<Pokemon>> getPokemons(@Query("limit") int limit, @Query("offset") int offset);
 /*
     @GET("movie/{movie_id}")
     Call<Movie> getMovieDetails(@Path("movie_id") int movieId,
