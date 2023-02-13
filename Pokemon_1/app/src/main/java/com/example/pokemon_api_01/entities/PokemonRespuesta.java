@@ -9,7 +9,7 @@ public class PokemonRespuesta {
         return results;
     }
 
-    public void setResults(ArrayList<Pokemon>) {
+    public void setResults(ArrayList<Pokemon> results) {
         this.results = results;
     }
 }
