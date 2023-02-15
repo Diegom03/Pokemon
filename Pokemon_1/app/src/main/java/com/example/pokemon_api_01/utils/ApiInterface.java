@@ -1,6 +1,7 @@
 package com.example.pokemon_api_01.utils;
 
 import com.example.pokemon_api_01.entities.Pokemon;
+import com.example.pokemon_api_01.entities.PokemonRespuesta;
 
 import java.util.ArrayList;
 
@@ -9,14 +10,14 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
-    @GET("pokemon")
-    Call<ArrayList<Pokemon>> getPokemons();
+    /*@GET("pokemon")
+    Call<ArrayList<Pokemon>> getPokemons();*/
 
     /*https://pokeapi.co/api/v2/pokemon?limit=20&offset=20*/
-    @GET("pokemon/")
-    Call<ArrayList<Pokemon>> getPokemon();
-
-    Call<ArrayList<Pokemon>> getPokemons(@Query("limit") int limit, @Query("offset") int offset);
+    /*@GET("pokemon/")
+    Call<ArrayList<Pokemon>> getPokemon();*/
+    @GET("pokemon")
+    Call<PokemonRespuesta> getPokemons(@Query("limit") int limit, @Query("offset") int offset);
 /*
     @GET("movie/{movie_id}")
     Call<Movie> getMovieDetails(@Path("movie_id") int movieId,
